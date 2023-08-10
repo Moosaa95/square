@@ -259,16 +259,80 @@ section {
   }
 }
 
+/* Add these styles to your existing CSS or in a <style> tag within your HTML */
+
+/* .logo-container {
+  background-color: #fff;
+  padding: 10px; 
+  border-radius: 30%; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+.marquee-container {
+  display: flex;
+  /* align-items: center; */
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+  color: #10d7b0;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee ul{
+  list-style: none;
+}
+
+.marquee ul > li {
+  padding: 0 20px;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.live-data-button {
+  display: flex;
+  padding: 5px 15px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-.header {
-  z-index: 997;
-  position: absolute;
-  padding: 30px 0;
+.header.fixed-top {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  background-color: #2b2222; /* Change the background color as needed */
+  z-index: 1000; /* Ensure the header is above other content */
 }
 
 .header .logo img {
